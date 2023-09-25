@@ -19,6 +19,7 @@ function displayTeam(data) {
     let clubNameCell = document.createElement('td');
     let clubxGDCell = document.createElement('td');
     let clubPositionCell = document.createElement('td');
+    let newPositionCell = document.createElement('td')
 
     // Set the appropriate properties/textContent
     let clubLogo = document.createElement('img');
@@ -26,14 +27,18 @@ function displayTeam(data) {
     let clubName = document.createTextNode(data.teamName);
     let clubxGD = document.createTextNode(data.xGD);
     let clubPosition = document.createTextNode(data.position);
+    let newPosition = document.createTextNode(data.id)
 
     // Append data to the respective table cells
+    newPositionCell.appendChild(newPosition)
     clubLogoCell.appendChild(clubLogo);
     clubNameCell.appendChild(clubName);
     clubxGDCell.appendChild(clubxGD);
     clubPositionCell.appendChild(clubPosition);
+    
 
     // Append cells to the row
+    row.appendChild(newPositionCell)
     row.appendChild(clubLogoCell);
     row.appendChild(clubNameCell);
     row.appendChild(clubxGDCell);
