@@ -2,7 +2,7 @@
     "PLTeams": [
         {
             "id": 1,
-            "logo.src": "mancitylogo.png",
+            "logo": "mancitylogo.png",
             "teamName": "Manchester City",
             "position": 1,
             "xGD":8.9,
@@ -15,7 +15,7 @@
         },
         {
             "id":2,
-            "logo.src": "liverpoollogo.png",
+            "logo": "liverpoollogo.png",
             "teamName": "Liverpool",
             "position": 2,
             "xGD":6.2,
@@ -28,7 +28,7 @@
         },
         {
             "id": 3,
-            "logo.src": "newcastlelogo.png",
+            "logo": "newcastlelogo.png",
             "teamName": "NewCastle",
             "position": 8,
             "xGD":5.8,
@@ -41,7 +41,7 @@
         },
         {
             "id": 4,
-            "logo.src": "arsenallogo.png",
+            "logo": "arsenallogo.png",
             "teamName": "Arsenal",
             "position": 5,
             "xGD": 5.6,
@@ -54,7 +54,7 @@
         },
         {
             "id": 5,
-            "logo.src": "chelsealogo.png",
+            "logo": "chelsealogo.png",
             "teamName": "Chelsea",
             "position": 14,
             "xGD": 5.2,
@@ -67,7 +67,7 @@
         },
         {
             "id": 6,
-            "logo.src": "brentfordlogo.png",
+            "logo": "brentfordlogo.png",
             "teamName": "Brentford",
             "position": 13,
             "xGD": 3.3,
@@ -80,7 +80,7 @@
         },
         {
             "id":7,
-            "logo.src": "brightonlogo.png",
+            "logo": "brightonlogo.png",
             "teamName": "Brighton",
             "position": 3,
             "xGD": 2.6,
@@ -93,7 +93,7 @@
         },
         {
             "id": 8,
-            "logo.src": "astonvillalogo.png",
+            "logo": "astonvillalogo.png",
             "teamName": "Aston Villa",
             "position": 6,
             "xGD": 2.3,
@@ -106,7 +106,7 @@
         },
         {
             "id": 9,
-            "logo.src": "tottenham logo.png",
+            "logo": "tottenham logo.png",
             "teamName": "Tottenham",
             "position": 4,
             "xGD": 2.2,
@@ -119,7 +119,7 @@
         },
         {
             "id":10,
-            "logo.src": "evertonlogo.png",
+            "logo": "evertonlogo.png",
             "teamName": "Everton",
             "position": 15,
             "xGD": 0.7,
@@ -132,7 +132,7 @@
         },
         {
             "id":11,
-            "logo.src": "manunitedlogo.png",
+            "logo": "manunitedlogo.png",
             "teamName": "Manchester United", 
             "position": 9,
             "xGD": -0.3,
@@ -145,7 +145,7 @@
         },
         {
             "id": 12,
-            "logo.src": "crystalpalacelogo.png",
+            "logo": "crystalpalacelogo.png",
             "teamName": "Crystal Palace",
             "position": 10,
             "xGD": -1,
@@ -158,7 +158,7 @@
         },
         {
             "id": 13,
-            "logo.src": "nottinghamforestlogo.png",
+            "logo": "nottinghamforestlogo.png",
             "teamName": "Nottingham Forest",
             "position": 12, 
             "xGD": -2,
@@ -171,7 +171,7 @@
         },
         {
             "id": 14,
-            "logo.src": "lutonlogo.png",
+            "logo": "lutonlogo.png",
             "teamName": "Luton Town",
             "position": 18,
             "xGD": -2.3,
@@ -184,7 +184,7 @@
         },
         {
             "id": 15,
-            "logo.src": "westhamlogo.png",
+            "logo": "westhamlogo.png",
             "teamName": "West Ham",
             "position": 7,
             "xGD": -4.3,
@@ -197,7 +197,7 @@
         },
         {
             "id": 16,
-            "logo.src": "burnleylogo.png",
+            "logo": "burnleylogo.png",
             "teamName": "Burnley",
             "position": 19,
             "xGD": -4.3,
@@ -210,7 +210,7 @@
         },
         {
             "id": 17,
-            "logo.src": "wolveslogo.png",
+            "logo": "wolveslogo.png",
             "teamName": "Wolverhapmton Wolves",
             "position": 16,
             "xGD": -4.8,
@@ -223,7 +223,7 @@
         },
         {
             "id": 18,
-            "logo.src": "bournemoutlogo.png",
+            "logo": "bournemoutlogo.png",
             "teamName": "Bournemouth",
             "position": 17,
             "xGD": -5.3,
@@ -236,7 +236,7 @@
         },
         {
             "id": 19,
-            "logo.src": "fullhamlogo.png",
+            "logo": "fullhamlogo.png",
             "teamName": "Fullham",
             "position": 11,
             "xGD": -7.6,
@@ -249,7 +249,7 @@
         },
         {
             "id": 20,
-            "logo.src": "sheffieldunitedlogo.png",
+            "logo": "sheffieldunitedlogo.png",
             "teamName": "Sheffield United",
             "position": 20,
             "xGD": -10.8,
