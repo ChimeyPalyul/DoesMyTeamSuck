@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 function displayTeam(data) {
     // Create a new table row for each team
     let row = document.createElement('tr');
+    row.addEventListener('mouseover', () => {
+    row.classList.add('row-with-shadow'); 
+    });
+    row.addEventListener('mouseout', () => {
+    row.classList.remove('row-with-shadow'); 
+    });
+    row.addEventListener('click',(e) =>{
+        additionalDetails(data)
+    })
+
     
     // Create DOM elements for each piece of data within the row
     let clubLogoCell = document.createElement('td');
@@ -26,13 +36,14 @@ function displayTeam(data) {
     editButtonCell.className = 'Button'
     let input = document.createElement('input')
 
+    //Patch new xGD to add table functionality
     editButtonCell.addEventListener('click', (e) => {
         e.preventDefault()
         let inputData = input.value
-        fetch(`http://localhost:3000/PLTeams/${data.id}`, { // Assuming 'id' is the unique identifier
+        fetch(`http://localhost:3000/PLTeams/${data.id}`, { 
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ xGD: inputData }) // Assuming you want to update 'xGD'
+        body: JSON.stringify({ xGD: inputData }) 
     })
 
         .then(res => res.json())
@@ -67,9 +78,6 @@ function displayTeam(data) {
     let tableBody = document.querySelector('#table-body');
     tableBody.appendChild(row);
 
-    clubLogo.addEventListener('click',(e) =>{
-        additionalDetails(data)
-    })
 }
 
 // function editFunction(team){
