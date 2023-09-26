@@ -105,8 +105,17 @@ function additionalDetails(team){
     dmtsBtn.className = 'Button'
     dmtsBtn.textContent = "Does My Team Suck?!?"
     dmtsBtn.addEventListener('click', (e) => {
-        alert("I am not sure yet, my slow ass developers are still working on other aspects of the website!")
-    })
+        const qualityQuotient = (team.xGD/team.matches)*100
+       if ( qualityQuotient > 100) {
+        return alert("Your team is good. Very good.")
+        } else if (qualityQuotient <= 100 && qualityQuotient > 50) {
+            return alert('Keep this up and you\'ll be playing in Europe next season!')
+        } else if (qualityQuotient <= 50 && qualityQuotient > 0) {
+            return alert('Comfortably mid-table...not bad, not good')
+        } else if (qualityQuotient <= 0 && qualityQuotient > -50) {
+            return alert ('You probablyyyyy won\'t be relegated?')
+        } return alert('Have fun in the Championship next year.')
+})
     aDetails.append(namE,points,goalsFour,goalsAgainst,xGfor,xGagainst,dmtsBtn)
 }
 
