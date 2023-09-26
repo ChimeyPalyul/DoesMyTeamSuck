@@ -85,7 +85,19 @@
   position:absolute;
   left: 80%;
   top: 30px;
-  
 }
 
-  
+.dltBtn{
+  border-radius: 3px;
+  color:#0F0F0F;
+  background-color: gainsboro;
+  font-weight: bold;
+  position:absolute;
+  left: 90%;
+  top:5px;
+  box-shadow: -1px 2px 1px #0F0F0F;
+}
+
+.dltBtn:hover{
+  background-color: red;
+}
