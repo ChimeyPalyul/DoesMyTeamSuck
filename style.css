@@ -1,3 +1,21 @@
+/* html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  main {
+    flex: 1; 
+  }
+
+  footer {
+    flex: 0 0 auto; 
+  } */
 
 .Table {
     width: px;
@@ -22,6 +40,18 @@
     justify-content: space-between;
     align-items: center;
     display: inline-flex;
+  }
+
+  header h1 {
+    font-size: 5em;
+    background-image: url(/soccerballs.jpeg);
+    background-size: 100px;
+    background-repeat: repeat;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    text-transform: uppercase;
   }
   
   .Frame2 {
@@ -85,19 +115,7 @@
   position:absolute;
   left: 80%;
   top: 30px;
+  
 }
 
-.dltBtn{
-  border-radius: 3px;
-  color:#0F0F0F;
-  background-color: gainsboro;
-  font-weight: bold;
-  position:absolute;
-  left: 90%;
-  top:5px;
-  box-shadow: -1px 2px 1px #0F0F0F;
-}
-
-.dltBtn:hover{
-  background-color: red;
-}
+  

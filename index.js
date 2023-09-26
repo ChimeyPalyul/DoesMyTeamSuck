@@ -9,13 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Iterate through the sorted data and display each team
             sortedData.forEach(team => displayTeam(team));
-            editFunction(team)
+            // editFunction(team)
         })
 })
 
 function displayTeam(data) {
     // Create a new table row for each team
     let row = document.createElement('tr');
+    row.addEventListener('mouseover', () => {
+    row.classList.add('row-with-shadow'); 
+    });
+    row.addEventListener('mouseout', () => {
+    row.classList.remove('row-with-shadow'); 
+    });
+    row.addEventListener('click',(e) =>{
+        additionalDetails(data)
+    })
+
     
     // Create DOM elements for each piece of data within the row
     let clubLogoCell = document.createElement('td');
@@ -23,13 +33,30 @@ function displayTeam(data) {
     let clubxGDCell = document.createElement('td');
     let clubPositionCell = document.createElement('td');
     let editButtonCell = document.createElement('td')
+    editButtonCell.className = 'Button'
+    let input = document.createElement('input')
+
+    //Patch new xGD to add table functionality
+    editButtonCell.addEventListener('click', (e) => {
+        e.preventDefault()
+        let inputData = input.value
+        fetch(`http://localhost:3000/PLTeams/${data.id}`, { 
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ xGD: inputData }) 
+    })
+
+        .then(res => res.json())
+        .catch(e => console.log(e))
+    })
+
     // Set the appropriate properties/textContent
     let clubLogo = document.createElement('img');
     clubLogo.src = data.logo; // Assuming 'logo' is the URL to the image
     let clubName = document.createTextNode(data.teamName);
     let clubxGD = document.createTextNode(data.xGD);
     let clubPosition = document.createTextNode(data.position);
-    let editButton = document.createTextNode("Edit")
+    let editButton = document.createTextNode("Update")
          
 
 
@@ -45,43 +72,13 @@ function displayTeam(data) {
     row.appendChild(clubNameCell);
     row.appendChild(clubxGDCell);
     row.appendChild(clubPositionCell);
+    row.appendChild(input)
     row.appendChild(editButtonCell)
     // Append the row to the table body
     let tableBody = document.querySelector('#table-body');
     tableBody.appendChild(row);
 
-    clubLogo.addEventListener('click',(e) =>{
-        additionalDetails(data)
-    })
 }
-
-// function editFunction(team){
-//     let currentTeam = team
-//     editButton.addEventListener('click', (e) => {
-//     let newDiv = document.createElement('div')
-//     let newPosition = document.createElement('input')
-//     let newxGD = document.createElement('input')
-//     let newGoalsFor = document.createElement('input')
-//     let newGoalsAgainst = document.createElement('input')
-//     let newxGFor = document.createElement('input')
-//     let newXGAgainst = document.createElement('input')
-//     let newPoints = document.createElement("input")
-//     let newmatches = document.createElement('input')
-
-//     currentTeam.position = newPosition.value
-//     currentTeam.xGD += newxGD.value
-//     currentTeam.goalsFor += newGoalsFor.value
-//     currentTeam.goalsAgainst += newGoalsAgainst.value
-//     currentTeam.xGFor += newxGFor.value
-//     currentTeam.xGAgainst += newXGAgainst.value
-//     currentTeam.points += newPoints.value
-//     currentTeam.matches = newmatches.value
-
-//     newDiv.append(newPosition, newxGD, newGoalsFor, newGoalsAgainst, newxGFor, newXGAgainst, newPoints,newmatches)
-    
-//     })
-//     editFunction(team)
-// }
 
 function additionalDetails(team){
     let currentTeam = team;
