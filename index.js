@@ -1,3 +1,7 @@
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch('http://localhost:3000/PLTeams')
         .then(response => response.json())
@@ -42,6 +46,37 @@ function displayTeam(data) {
     // Append the row to the table body
     let tableBody = document.querySelector('#table-body');
     tableBody.appendChild(row);
+
+    clubLogo.addEventListener('click',(e) =>{
+        additionalDetails(data)
+    })
+}
+
+function additionalDetails(team){
+    let currentTeam = team;
+    let aDetails = document.querySelector('#additionalInfo')
+    let title = document.createElement('h2')
+    title.textContent = "Additional Details"
+    let namE = document.createElement('p')
+    let points = document.createElement('p')
+    let goalsFour = document.createElement('p')
+    let goalsAgainst = document.createElement('p')
+    let xGfor = document.createElement('p')
+    let xGagainst = document.createElement('p')
+    let dmtsBtn = document.createElement('btn')
+
+    namE.textContent = `${currentTeam.teamName}`
+    points.textContent = `Points: ${currentTeam.points}`
+    goalsFour.textContent = `Goals For: ${currentTeam.goalsFor} `
+    goalsAgainst.textContent = `Goals Against: ${currentTeam.goalsAgainst}`
+    xGfor.textContent = `Expected Goals: ${currentTeam.xGFor}`
+    xGagainst.textContent = `Expected Goals Conceded: ${currentTeam.xGAgainst}`
+    dmtsBtn.textContent = "Does My Team Suck?!?"
+    dmtsBtn.addEventListener('click', (e) => {
+        alert("I am not sure yet, my slow ass developers are still working on other aspects of the website!")
+    })
+    aDetails.append(namE,points,goalsFour,goalsAgainst,xGfor,xGagainst,dmtsBtn)
+
 }
 
 
