@@ -80,34 +80,6 @@ function displayTeam(data) {
 
 }
 
-// function editFunction(team){
-//     let currentTeam = team
-//     editButton.addEventListener('click', (e) => {
-//     let newDiv = document.createElement('div')
-//     let newPosition = document.createElement('input')
-//     let newxGD = document.createElement('input')
-//     let newGoalsFor = document.createElement('input')
-//     let newGoalsAgainst = document.createElement('input')
-//     let newxGFor = document.createElement('input')
-//     let newXGAgainst = document.createElement('input')
-//     let newPoints = document.createElement("input")
-//     let newmatches = document.createElement('input')
-
-//     currentTeam.position = newPosition.value
-//     currentTeam.xGD += newxGD.value
-//     currentTeam.goalsFor += newGoalsFor.value
-//     currentTeam.goalsAgainst += newGoalsAgainst.value
-//     currentTeam.xGFor += newxGFor.value
-//     currentTeam.xGAgainst += newXGAgainst.value
-//     currentTeam.points += newPoints.value
-//     currentTeam.matches = newmatches.value
-
-//     newDiv.append(newPosition, newxGD, newGoalsFor, newGoalsAgainst, newxGFor, newXGAgainst, newPoints,newmatches)
-    
-//     })
-//     editFunction(team)
-// }
-
 function additionalDetails(team){
     let currentTeam = team;
     let aDetails = document.querySelector('#additionalInfo')

@@ -23,6 +23,18 @@
     align-items: center;
     display: inline-flex;
   }
+
+  header h1 {
+    font-size: 5em;
+    background-image: url(/soccerballs.jpeg);
+    background-size: 100px;
+    background-repeat: repeat;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    text-transform: uppercase;
+  }
   
   .Frame2 {
     flex: 1 1 0;
