@@ -78,4 +78,12 @@
   .Button:hover {
     background-color: #b94f29;
 }
+
+.aInfo{ 
+  position:absolute;
+  left: 80%;
+  top: 30px;
+  
+}
+
   

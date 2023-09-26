@@ -1,6 +1,4 @@
-
-
-
+let currentTeam;
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('http://localhost:3000/PLTeams')
@@ -11,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Iterate through the sorted data and display each team
             sortedData.forEach(team => displayTeam(team));
+            editFunction(team)
         })
 })
 
@@ -31,6 +30,8 @@ function displayTeam(data) {
     let clubxGD = document.createTextNode(data.xGD);
     let clubPosition = document.createTextNode(data.position);
     let editButton = document.createTextNode("Edit")
+         
+
 
     // Append data to the respective table cells
     clubLogoCell.appendChild(clubLogo);
@@ -53,6 +54,34 @@ function displayTeam(data) {
         additionalDetails(data)
     })
 }
+
+// function editFunction(team){
+//     let currentTeam = team
+//     editButton.addEventListener('click', (e) => {
+//     let newDiv = document.createElement('div')
+//     let newPosition = document.createElement('input')
+//     let newxGD = document.createElement('input')
+//     let newGoalsFor = document.createElement('input')
+//     let newGoalsAgainst = document.createElement('input')
+//     let newxGFor = document.createElement('input')
+//     let newXGAgainst = document.createElement('input')
+//     let newPoints = document.createElement("input")
+//     let newmatches = document.createElement('input')
+
+//     currentTeam.position = newPosition.value
+//     currentTeam.xGD += newxGD.value
+//     currentTeam.goalsFor += newGoalsFor.value
+//     currentTeam.goalsAgainst += newGoalsAgainst.value
+//     currentTeam.xGFor += newxGFor.value
+//     currentTeam.xGAgainst += newXGAgainst.value
+//     currentTeam.points += newPoints.value
+//     currentTeam.matches = newmatches.value
+
+//     newDiv.append(newPosition, newxGD, newGoalsFor, newGoalsAgainst, newxGFor, newXGAgainst, newPoints,newmatches)
+    
+//     })
+//     editFunction(team)
+// }
 
 function additionalDetails(team){
     let currentTeam = team;
