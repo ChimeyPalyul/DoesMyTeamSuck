@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Iterate through the sorted data and display each team
             sortedData.forEach(team => displayTeam(team));
-            editFunction(team)
+            // editFunction(team)
         })
 })
 
@@ -23,13 +23,29 @@ function displayTeam(data) {
     let clubxGDCell = document.createElement('td');
     let clubPositionCell = document.createElement('td');
     let editButtonCell = document.createElement('td')
+    editButtonCell.className = 'Button'
+    let input = document.createElement('input')
+
+    editButtonCell.addEventListener('click', (e) => {
+        e.preventDefault()
+        let inputData = input.value
+        fetch(`http://localhost:3000/PLTeams/${data.id}`, { // Assuming 'id' is the unique identifier
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ xGD: inputData }) // Assuming you want to update 'xGD'
+    })
+
+        .then(res => res.json())
+        .catch(e => console.log(e))
+    })
+
     // Set the appropriate properties/textContent
     let clubLogo = document.createElement('img');
     clubLogo.src = data.logo; // Assuming 'logo' is the URL to the image
     let clubName = document.createTextNode(data.teamName);
     let clubxGD = document.createTextNode(data.xGD);
     let clubPosition = document.createTextNode(data.position);
-    let editButton = document.createTextNode("Edit")
+    let editButton = document.createTextNode("Update")
          
 
 
@@ -45,6 +61,7 @@ function displayTeam(data) {
     row.appendChild(clubNameCell);
     row.appendChild(clubxGDCell);
     row.appendChild(clubPositionCell);
+    row.appendChild(input)
     row.appendChild(editButtonCell)
     // Append the row to the table body
     let tableBody = document.querySelector('#table-body');
