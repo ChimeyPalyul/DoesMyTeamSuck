@@ -45,15 +45,13 @@
   header h1 {
     font-size: 5em;
     /* background-image: url(/soccerballs.jpeg); */
-    background-image: linear-gradient(to left, red, red);
     background-size: 100px;
     background-repeat: repeat;
-    color: transparent;
+    color: red;
     -webkit-background-clip: text;
     background-clip: text;
     text-transform: uppercase;
     text-transform: uppercase;
-
   }
   
   .Frame2 {
@@ -116,8 +114,22 @@
 .aInfo{ 
   position:absolute;
   left: 80%;
-  top: 30px;
+  top: 200px;
   
+}
+
+.dltBtn {
+  position:absolute;
+  left: 90%;
+  top: 5%;
+  color:#0F0F0F;
+  box-shadow: -1px 2px 1px black; 
+  border-radius: 10%; 
+  background-color: gainsboro;
+}
+
+.dltBtn:hover{
+  background-color: red;
 }
 
   
