@@ -1,4 +1,14 @@
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column; /* Make children stack vertically */
+  }
+  
 .Table {
     width: px;
     height: px;
