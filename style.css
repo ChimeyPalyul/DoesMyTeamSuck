@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -6,9 +6,17 @@ html, body {
   
   body {
     display: flex;
-    flex-direction: column; /* Make children stack vertically */
+    flex-direction: column; 
   }
-  
+
+  main {
+    flex: 1; 
+  }
+
+  footer {
+    flex: 0 0 auto; 
+  } */
+
 .Table {
     width: px;
     height: px;
