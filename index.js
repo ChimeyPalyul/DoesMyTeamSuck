@@ -109,7 +109,7 @@ function additionalDetails(team){
             return alert('Keep this up and you\'ll be playing in Europe next season!')
         } else if (qualityQuotient <= 50 && qualityQuotient > 0) {
             return alert('Comfortably mid-table...not bad, not good')
-        } else if (qualityQuotient <= 0 && qualityQuotient > -50) {
+        } else if (qualityQuotient <= 0 && qualityQuotient > -60) {
             return alert ('You probablyyyyy won\'t be relegated?')
         } return alert('Have fun in the Championship next year.')
 })

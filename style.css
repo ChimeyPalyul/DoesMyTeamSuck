@@ -44,7 +44,8 @@
 
   header h1 {
     font-size: 5em;
-    background-image: url(/soccerballs.jpeg);
+    /* background-image: url(/soccerballs.jpeg); */
+    background-image: linear-gradient(to left, red, red);
     background-size: 100px;
     background-repeat: repeat;
     color: transparent;
@@ -52,6 +53,7 @@
     background-clip: text;
     text-transform: uppercase;
     text-transform: uppercase;
+
   }
   
   .Frame2 {
