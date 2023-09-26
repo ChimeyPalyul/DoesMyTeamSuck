@@ -1,26 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Does My Team Suck?</title>
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <script defer src="index.js"></script>
-      </head>
+<head>
+    <title>Does My Team Suck?</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="index.js"></script>
+</head>
 <body>
-<table id="table">
-    <tr>
-        <th></th>
-        <th>Logo</th>
-        <th>Team Name</th>
-        <th>xGD</th>
-        <th>Actual Table Ranking</th>
-    </tr>
-    <tr id="table-row">
-        <img id="club-logo"></img>
-        <td id="club-name"></td>
-        <td id="club-xGD"></td>
-        <td id="club-position"></td>
-    </tr>
-
-</table>
+    <table id="table" class="Table">
+        <thead>
+            <tr class="Header">
+                <th class="Frame2"></th>
+                <th class="Item">Logo</th>
+                <th class="Item">Team</th>
+                <th class="Item">xGD</th>
+                <th class="Item">PL Ranking</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
 </body>
 </html>
