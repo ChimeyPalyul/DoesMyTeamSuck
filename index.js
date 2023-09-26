@@ -23,26 +23,28 @@ function displayTeam(data) {
     let clubNameCell = document.createElement('td');
     let clubxGDCell = document.createElement('td');
     let clubPositionCell = document.createElement('td');
-
+    let editButtonCell = document.createElement('td')
     // Set the appropriate properties/textContent
     let clubLogo = document.createElement('img');
     clubLogo.src = data.logo; // Assuming 'logo' is the URL to the image
     let clubName = document.createTextNode(data.teamName);
     let clubxGD = document.createTextNode(data.xGD);
     let clubPosition = document.createTextNode(data.position);
+    let editButton = document.createTextNode("Edit")
 
     // Append data to the respective table cells
     clubLogoCell.appendChild(clubLogo);
     clubNameCell.appendChild(clubName);
     clubxGDCell.appendChild(clubxGD);
     clubPositionCell.appendChild(clubPosition);
+    editButtonCell.appendChild(editButton)
 
     // Append cells to the row
     row.appendChild(clubLogoCell);
     row.appendChild(clubNameCell);
     row.appendChild(clubxGDCell);
     row.appendChild(clubPositionCell);
-
+    row.appendChild(editButtonCell)
     // Append the row to the table body
     let tableBody = document.querySelector('#table-body');
     tableBody.appendChild(row);
