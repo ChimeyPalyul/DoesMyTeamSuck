@@ -53,6 +53,29 @@
     padding: 62px; /* Example padding */
     border-bottom: 1px solid #DDD; /* Example bottom border */
   }
-  
-  
+
+  .Button {
+    text-align: center; 
+    color: #E8EEF7; 
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: 600; 
+    word-wrap: break-word;
+    width: 66px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 3px; 
+    padding-bottom: 3px; 
+    background: #1957B4; 
+    box-shadow: -1px 2px 1px #0F0F0F; 
+    border-radius: 7px; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: flex
+  }
+
+  .Button:hover {
+    background-color: #b94f29;
+}
   

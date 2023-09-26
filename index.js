@@ -71,12 +71,12 @@ function additionalDetails(team){
     goalsAgainst.textContent = `Goals Against: ${currentTeam.goalsAgainst}`
     xGfor.textContent = `Expected Goals: ${currentTeam.xGFor}`
     xGagainst.textContent = `Expected Goals Conceded: ${currentTeam.xGAgainst}`
+    dmtsBtn.className = 'Button'
     dmtsBtn.textContent = "Does My Team Suck?!?"
     dmtsBtn.addEventListener('click', (e) => {
         alert("I am not sure yet, my slow ass developers are still working on other aspects of the website!")
     })
     aDetails.append(namE,points,goalsFour,goalsAgainst,xGfor,xGagainst,dmtsBtn)
-
 }
 
 
