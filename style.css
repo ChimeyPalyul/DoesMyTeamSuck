@@ -50,7 +50,9 @@
 
   #table-body td {
     /* Add your desired styles for table cells within the table body here */
-    padding: 62px; /* Example padding */
+    height: 1em;
+    width: 9.15em;
+    align-content: center;
     border-bottom: 1px solid #DDD; /* Example bottom border */
   }
 
