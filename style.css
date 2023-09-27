@@ -45,6 +45,8 @@
   header h1 {
     font-size: 5em;
     /* background-image: url(/soccerballs.jpeg); */
+    text-align: center;
+    /* background-image: linear-gradient(to left, red, red); */
     background-size: 100px;
     background-repeat: repeat;
     color: red;
@@ -52,6 +54,7 @@
     background-clip: text;
     text-transform: uppercase;
     text-transform: uppercase;
+  
   }
   
   .Frame2 {
@@ -114,7 +117,7 @@
 .aInfo{ 
   position:absolute;
   left: 80%;
-  top: 200px;
+  top: 250px;
   
 }
 
@@ -132,4 +135,31 @@
   background-color: red;
 }
 
+.aInfo{
+  border-style: solid;
+  border-color: purple;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
   
+header h2{
+  text-align: center;
+  color: whitesmoke;
+}
+
+header{
+  top:0%;
+  border-radius: 300px;
+  background: 100px;
+  background-color:black ;
+}
+
+body{
+  background-color:purple;
+}
+
+.row-with-shadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out; 
+}
