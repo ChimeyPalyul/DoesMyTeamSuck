@@ -39,7 +39,9 @@
     border-bottom: 1px solid #5A5A5A;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     display: inline-flex;
+    max-width: 510px;
   }
 
   header h1 {
@@ -79,14 +81,18 @@
   #table-body tr {
     /* Add your desired styles for table rows within the table body here */
     background-color: #EFEFEF; /* Example background color */
+    padding: 0%;
   }
 
   #table-body td {
     /* Add your desired styles for table cells within the table body here */
     height: 1em;
-    width: 9.15em;
-    text-align: center;
+    width: 9em;
+    text-align: left;
     border-bottom: 1px solid #DDD; /* Example bottom border */
+  }
+  #table-body{
+    background-color: #EFEFEF;
   }
 
   .Button {
@@ -149,10 +155,9 @@ header h2{
 }
 
 header{
-  top:0%;
-  border-radius: 300px;
   background: 100px;
-  background-color:black ;
+  background-color:black;
+  border-top: #0F0F0F;
 }
 
 body{
